@@ -1,0 +1,23 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x3F, 16, 2); // 16 อักษร 2 บรรทัด  , Address 0x3F | 0x27
+
+void setup() {
+  lcd.begin();
+  lcd.setCursor(0, 0);
+  lcd.print("Example"); 
+  delay(3000); 
+  lcd.clear(); 
+}
+
+void loop() {
+  lcd.setCursor(0, 0);
+  lcd.print("Hello World");
+  lcd.setCursor(5, 1);
+  lcd.print("Project");
+  
+  // delay(500); 
+  // lcd.clear(); 
+  // delay(500);
+}
